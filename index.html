@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/alert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="src/js/alert.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.success').click(function () {
+                Alert.show({
+                    type: 'success',
+                    title: 'Success',
+                    text: 'This is success popup box',
+                    openAnimateClass: 'wobble',
+                    closeAnimateClass: 'fadeOut',
+                    showConfirmButton: true,
+                    showCancelButton: true,
+                    cancelButtonText: 'Cancel',
+                    confirmButtonText: 'Ok'
+                });
+            });
+            $('.warning').click(function () {
+                Alert.show({
+                    type: 'warning',
+                    title: 'Upss',
+                    text: 'This is warning popup box',
+                    openAnimateClass: 'wobble',
+                    closeAnimateClass: 'fadeOut',
+                    showConfirmButton: true,
+                    showCancelButton: true,
+                    cancelButtonText: 'Cancel',
+                    confirmButtonText: 'Ok'
+                });
+            });
+            $('.error').click(function () {
+                Alert.show({
+                    type: 'error',
+                    title: 'Upss!',
+                    text: 'This is error box',
+                    openAnimateClass: 'wobble',
+                    closeAnimateClass: 'fadeOut',
+                    showConfirmButton: true,
+                    showCancelButton: true,
+                    cancelButtonText: 'Cancel',
+                    confirmButtonText: 'Ok'
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<button type="button" class="success">Show Success Box</button>
+<button type="button" class="warning">Show Warning Box</button>
+<button type="button" class="error">Show Error Box</button>
+</body>
+</html>
