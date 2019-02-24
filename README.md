@@ -18,8 +18,8 @@ Alert.show({
   text: 'Your text',
   openAnimateClass: 'Popup box open animation(animate.css)',
   closeAnimateClass: 'Popup box close animation(animate.css)',
-  showConfirmButton: true|false,
-  showCancelButton: true|false,
+  showConfirmButton: boolean,
+  showCancelButton: boolean,
   cancelButtonText: 'Your button text',
   confirmButtonText: 'Your button text'
 });
