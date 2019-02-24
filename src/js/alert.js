@@ -75,6 +75,7 @@
 
             $(document).keyup(function (event) {
                 if (event.which === 27) {
+                    $('#'+relatedTargetId).removeAttr('style').keydown();
                     $('.overlay'+randomInt).addClass('animated ' + options.closeAnimateClass);
                     setTimeout(function () {
                         $('.overlay'+randomInt).remove();
