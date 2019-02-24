@@ -1,17 +1,17 @@
-.alert {
+#alert {
     margin-right: auto;
     margin-left: auto;
     background: #fafbfb!important;
 }
-.head {
+#head {
     font-size: 20px;
     font-weight: bold;
 }
-.content {
+#content {
     font-size: 14px;
     text-align: center;
 }
-.overlay {
+#overlay {
     display: none;
     background: rgba(0, 0, 0, 0.70);
     position: absolute;

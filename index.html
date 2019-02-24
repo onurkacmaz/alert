@@ -1,76 +1,75 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Document</title>
     <link rel="stylesheet" href="src/css/alert.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-<button type="button" class="success">Show Success Box</button>
+<button type="button" id="asd" class="success">Show Success Box</button>
 <button type="button" class="warning">Show Warning Box</button>
 <button type="button" class="error">Show Error Box</button>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
 <script src="src/js/alert.js"></script>
 <script>
     $(document).ready(function () {
-        Alert.show({
-            type: 'info',
-            title: 'Hazırsan başlıyoruz :)',
-            text: 'Hazırsan başlıyoruz',
-            form: {
-                form_name:'demo_form',
-                form_id:'demo_form_id',
-                form_action:'sadad.com/asdasd',
-                inputs: [
-                    {
-                        type:'text',
-                        name:'name',
-                        id:'name',
-                        placeholder: 'Ad Soyad',
-                        value:"Onur Kaçmaz",
-                        class:'form-control col-12 mt-2'
-                    },
-                    {
-                        type:'email',
-                        name:'email_name',
-                        id:'email_id',
-                        placeholder: 'Email',
-                        value:"kacmaz.onur@hotmail.com",
-                        class:'form-control col-12 mt-2'
-                    },
-                    {
-                        type:'number',
-                        name:'phone',
-                        id:'phone',
-                        placeholder: 'Phone',
-                        value:"0000000000",
-                        class:'form-control col-12 mt-2'
-                    }
-                ]
-            },
-            openAnimateClass: 'jackInTheBox',
-            closeAnimateClass: 'fadeOut',
-            showConfirmButton: true,
-            showCancelButton: true,
-            cancelButtonText: 'Vazgeç',
-            confirmButtonText: 'Evet Hazırım',
-            okFunction: function () {
-                Alert.show({
-                    type: 'success',
-                    title: 'Başarılı',
-                    text: 'Başarılı',
-                    openAnimateClass: 'jackInTheBox',
-                    closeAnimateClass: 'fadeOut',
-                    showConfirmButton: true,
-                    showCancelButton: true,
-                });
-            }
-        });
+        $('.success').on('click', () => {
+            Alert.show({
+                type: 'error',
+                title: 'Hazırsan başlıyoruz :)',
+                text: 'Hazırsan başlıyoruz',
+                openAnimateClass: 'wobble',
+                closeAnimateClass: 'fadeOut',
+                showConfirmButton: true,
+                showCancelButton: true,
+                cancelButtonText: 'Vazgeç',
+                confirmButtonText: 'Evet Hazırım',
+                form: {
+                    form_name: 'demo_form',
+                    form_id: 'demo_form_id',
+                    form_action: 'url',
+                    inputs: [
+                        {
+                            type: 'text',
+                            name: 'name',
+                            id: 'name',
+                            placeholder: 'Name and Surname',
+                            value: "onurkacmaz",
+                            class: 'form-control col-12 mt-2'
+                        },
+                        {
+                            type: 'email',
+                            name: 'email_name',
+                            id: 'email_id',
+                            placeholder: 'Email',
+                            value: "kacmaz.onur@hotmail.com",
+                            class: 'form-control col-12 mt-2'
+                        },
+                        {
+                            type: 'number',
+                            name: 'phone',
+                            id: 'phone',
+                            placeholder: 'Phone',
+                            value: "XXX XXX XX XX",
+                            class: 'form-control col-12 mt-2'
+                        }
+                    ]
+                },
+                okFunction: function () {
+                    alert($('#name').val());
+                }
+            });
+        })
     });
 </script>
 </html>
