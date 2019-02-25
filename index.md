@@ -17,6 +17,8 @@ Simple, responsive, highly customizable Javascript popup boxes.
 
 > First you need to include the necessary files. You must then create an Alert object and specify the necessary settings as parameters.
 
+### Alert.show();
+
 ```js
 Alert.show({
     type: 'info',
@@ -60,12 +62,18 @@ Alert.show({
         ]
     },
     okFunction: function () {
-        Alert.little({
-            type: 'info',
-            title: 'Success',
-            text: 'This is success box. Will close after 2000 ms.',
-            delay: 2000
-        });
+        // Ok Function
     }
+});
+```
+
+### Alert.little();
+
+```js
+Alert.little({
+  type: 'info',
+  title: 'Success',
+  text: 'This is success box. Will close after 2000 ms.',
+  delay: 2000
 });
 ```
