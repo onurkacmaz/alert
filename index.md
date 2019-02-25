@@ -1,5 +1,5 @@
 ---
-title: My First Page
+title: Alert.show()
 layout: default
 published: true
 ---
