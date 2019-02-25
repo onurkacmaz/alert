@@ -17,6 +17,7 @@ Simple, responsive, highly customizable Javascript popup boxes.
 
 > First you need to include the necessary files. You must then create an Alert object and specify the necessary settings as parameters.
 
+```js
 Alert.show({
     type: 'info',
     title: 'Hi :)',
@@ -67,3 +68,4 @@ Alert.show({
         });
     }
 });
+```
