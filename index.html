@@ -13,9 +13,7 @@
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-<button type="button" id="asd" class="success">Show Success Box</button>
-<button type="button" class="warning">Show Warning Box</button>
-<button type="button" class="error">Show Error Box</button>
+<button type="button" id="asd" class="success">Show Box</button>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -25,15 +23,15 @@
     $(document).ready(function () {
         $('.success').on('click', () => {
             Alert.show({
-                type: 'error',
-                title: 'Hazırsan başlıyoruz :)',
-                text: 'Hazırsan başlıyoruz',
+                type: 'info',
+                title: 'Hi :)',
+                text: 'Hi This is Alert.show();',
                 openAnimateClass: 'wobble',
                 closeAnimateClass: 'fadeOut',
                 showConfirmButton: true,
                 showCancelButton: true,
-                cancelButtonText: 'Vazgeç',
-                confirmButtonText: 'Evet Hazırım',
+                cancelButtonText: 'Cancel',
+                confirmButtonText: 'Ok',
                 form: {
                     form_name: 'demo_form',
                     form_id: 'demo_form_id',
@@ -44,7 +42,7 @@
                             name: 'name',
                             id: 'name',
                             placeholder: 'Name and Surname',
-                            value: "onurkacmaz",
+                            value: "Onur Kaçmaz",
                             class: 'form-control col-12 mt-2'
                         },
                         {
@@ -66,7 +64,12 @@
                     ]
                 },
                 okFunction: function () {
-                    alert($('#name').val());
+                    Alert.little({
+                        type: 'info',
+                        title: 'Success',
+                        text: 'This is success box. Will close after 2000 ms.',
+                        delay: 2000
+                    });
                 }
             });
         })

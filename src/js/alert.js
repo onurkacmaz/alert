@@ -76,7 +76,7 @@
             $(document).keyup(function (event) {
                 if (event.which === 27) {
                     $('#'+relatedTargetId).removeAttr('style').keydown();
-                    $('.overlay'+randomInt).addClass('animated ' + options.closeAnimateClass);
+                    $('.overlay'+randomInt).addClass('animated ' + options.closeAnimateClass + ' faster');
                     setTimeout(function () {
                         $('.overlay'+randomInt).remove();
                     }, 500);
@@ -84,7 +84,7 @@
             });
             $('.cancel'+randomInt).click(function () {
                 $('#'+relatedTargetId).removeAttr('style').keydown();
-                $('.overlay'+randomInt).addClass('animated ' + options.closeAnimateClass);
+                $('.overlay'+randomInt).addClass('animated ' + options.closeAnimateClass + ' faster');
                 setTimeout(function () {
                     $('.overlay'+randomInt).remove();
                 }, 500);
@@ -94,17 +94,55 @@
                 $('#'+relatedTargetId).removeAttr('style').keydown();
                 if (typeof options.okFunction === "function") {
                     options.okFunction();
-                    $('.overlay'+randomInt).addClass('animated ' + options.closeAnimateClass);
+                    $('.overlay'+randomInt).addClass('animated ' + options.closeAnimateClass + ' faster');
                     setTimeout(function () {
                         $('.overlay'+randomInt).remove();
                     }, 700);
                 } else {
-                    $('.overlay'+randomInt).addClass('animated ' + options.closeAnimateClass);
+                    $('.overlay'+randomInt).addClass('animated ' + options.closeAnimateClass + ' faster');
                     setTimeout(function () {
                         $('.overlay'+randomInt).remove();
                     }, 700);
                 }
             });
+        };
+
+        Alert.little = function (options) {
+
+            let randomInt = getRandomInt(0, 999);
+
+            if (typeof options.type !== "undefined" && typeof options.title !== "undefined" && typeof options.text !== "undefined") {
+
+                $('body').append('<div class="row"><div id="little" class="d-flex animated flipInX mr-lg-4 ml-lg-4 m-0 col-lg-4 col-12 row little'+randomInt+'">' +
+                    '<div class="col-2 m-0 pr-0 head-icon'+randomInt+'"></div>' +
+                    '<div class="col-10 pl-0 text'+randomInt+'" id="title">'+options.title+'</div>' +
+                    '<div class="col-12 mt-2 text'+randomInt+'" id="text">'+options.text+'</div>' +
+                '</div></div>');
+
+                if (options.type === "success") {
+                    $('#little .head-icon'+randomInt).append('<i style="color: #86ff66" class="fas fa-check fa-2x"></i>');
+                } else if (options.type === "warning") {
+                    $('#little .head-icon'+randomInt).append('<i style="color: #fbbb14" class="fas fa-exclamation-triangle fa-2x"></i>');
+                } else if (options.type === "error") {
+                    $('#little .head-icon'+randomInt).append('<i style="color: #a4090b" class="fas fa-skull-crossbones fa-2x"></i>');
+                } else if (options.type === "info") {
+                    $('#little .head-icon'+randomInt).append('<i style="color: #12a0ff" class="fas fa-info-circle fa-2x"></i>');
+                }
+
+                let delay = null;
+                if (typeof options.delay === "undefined" || options.delay === "") {
+                    delay = 1500;
+                }else {
+                    delay = options.delay;
+                }
+                setTimeout(function () {
+                    $('.little'+randomInt).removeClass('flipInX').addClass('fadeOutUpBig');
+                    setTimeout(function () {
+                        $('.little'+randomInt).remove();
+                    }, 1000);
+                }, delay);
+
+            }
         };
 
         return Alert;
