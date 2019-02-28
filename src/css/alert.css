@@ -15,7 +15,10 @@ body {color: #494949!important;}
 #overlay {
     display: none;
     background: rgba(0, 0, 0, 0.70);
-    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
