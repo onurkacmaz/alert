@@ -129,7 +129,6 @@
                     selected_position = "top-right";
                     positionClass = positions[selected_position];
                 }
-                console.log(positionClass);
 
                 $('body').append('<div class="row"><div id="little" class="'+positionClass+' d-flex animated flipInX mr-lg-4 ml-lg-4 m-0 col-lg-4 col-12 row little' + randomInt + '">' +
                     '<div class="col-2 m-0 pr-0 head-icon' + randomInt + '"></div>' +

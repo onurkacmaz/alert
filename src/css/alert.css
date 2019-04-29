@@ -3,6 +3,9 @@ body {color: #494949!important;}
     margin-right: auto;
     margin-left: auto;
     background: #fafbfb!important;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 20px 8px #383838;
 }
 #head {
     font-size: 20px;
@@ -28,7 +31,7 @@ body {color: #494949!important;}
     display: none;
     background: #fafbfb;
     position: absolute;
-    box-shadow: 1px 1px 20px 12px #ececec;
+    border: solid 1px #e8e8e8;
     border-radius: 4px;
     padding: 15px;
 }
